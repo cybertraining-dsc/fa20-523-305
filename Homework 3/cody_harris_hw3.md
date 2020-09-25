@@ -38,15 +38,15 @@ While this data is not the most sensitive data on the planet, it is important th
 A project this large and versatile requires the use of many software tools. These software tools generally need some level or automatic communication if they are used together in a project. With a large number of tools, there becomes a complex IT infrastructure that needs to be managed, and constantly monitored. It is possible for one tool to receive a critical update, and then cause issues with integration of other software systems. 
 
 # References 
-[1] "Square Kilometre Array - ICRAR", ICRAR, 2020. [Online]. Available: https://www.icrar.org/our-research/ska/. [Accessed: 23- Sep- 2020].
-[2] "What are Radio Telescopes? - National Radio Astronomy Observatory", National Radio Astronomy Observatory, 2020. [Online]. Available: https://public.nrao.edu/telescopes/radio-telescopes/. [Accessed: 23- Sep- 2020].
-[3] "SKA Science - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/science/. [Accessed: 24- Sep- 2020].
-[4] "Galaxy Evolution, Cosmology and Dark Energy - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/galaxyevolution/. [Accessed: 24- Sep- 2020].
-[5] "Cosmic Magnetism - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/magnetism/. [Accessed: 24- Sep- 2020].
-[6] "Probing the Cosmic Dawn - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/cosmicdawn/. [Accessed: 24- Sep- 2020].
-[7] L. Sierra, "Are we alone in the universe? Revisiting the Drake equation", Exoplanet Exploration: Planets Beyond our Solar System, 2020. [Online]. Available: https://exoplanets.nasa.gov/news/1350/are-we-alone-in-the-universe-revisiting-the-drake-equation/. [Accessed: 24- Sep- 2020].
-[8] "Design - ICRAR", ICRAR, 2020. [Online]. Available: https://www.icrar.org/our-research/ska/design/. [Accessed: 24- Sep- 2020].
-[9] "Africa - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/africa/. [Accessed: 24- Sep- 2020].
-[10] Square Kilometre Array, Building a giant telescope in the outback - part 2. 2020.
-[11] "Australia - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/australia/. [Accessed: 24- Sep- 2020].
+[1] "Square Kilometre Array - ICRAR", ICRAR, 2020. [Online]. Available: https://www.icrar.org/our-research/ska/. [Accessed: 23- Sep- 2020].  
+[2] "What are Radio Telescopes? - National Radio Astronomy Observatory", National Radio Astronomy Observatory, 2020. [Online]. Available: https://public.nrao.edu/telescopes/radio-telescopes/. [Accessed: 23- Sep- 2020].  
+[3] "SKA Science - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/science/. [Accessed: 24- Sep- 2020].  
+[4] "Galaxy Evolution, Cosmology and Dark Energy - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/galaxyevolution/. [Accessed: 24- Sep- 2020].  
+[5] "Cosmic Magnetism - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/magnetism/. [Accessed: 24- Sep- 2020].  
+[6] "Probing the Cosmic Dawn - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/cosmicdawn/. [Accessed: 24- Sep- 2020].  
+[7] L. Sierra, "Are we alone in the universe? Revisiting the Drake equation", Exoplanet Exploration: Planets Beyond our Solar System, 2020. [Online]. Available: https://exoplanets.nasa.gov/news/1350/are-we-alone-in-the-universe-revisiting-the-drake-equation/. [Accessed: 24- Sep- 2020].  
+[8] "Design - ICRAR", ICRAR, 2020. [Online]. Available: https://www.icrar.org/our-research/ska/design/. [Accessed: 24- Sep- 2020].  
+[9] "Africa - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/africa/. [Accessed: 24- Sep- 2020].  
+[10] Square Kilometre Array, Building a giant telescope in the outback - part 2. 2020.  
+[11] "Australia - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/australia/. [Accessed: 24- Sep- 2020].  
 [12] Filled in Use Case Survey for SKA
