@@ -39,9 +39,9 @@ A project this large and versatile requires the use of many software tools. Thes
 
 # References 
 [1] "Square Kilometre Array - ICRAR", ICRAR, 2020. [Online]. Available: https://www.icrar.org/our-research/ska/. [Accessed: 23- Sep- 2020].  
-[2] "What are Radio Telescopes? - National Radio Astronomy Observatory", National Radio Astronomy Observatory, 2020. [Online]. Available: https://public.nrao.edu/telescopes/radio-telescopes/. [Accessed: 23- Sep- 2020].  
-[3] "SKA Science - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/science/. [Accessed: 24- Sep- 2020].  
-[4] "Galaxy Evolution, Cosmology and Dark Energy - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/galaxyevolution/. [Accessed: 24- Sep- 2020].  
+[2] "What are Radio Telescopes? - National Radio Astronomy Observatory", National Radio Astronomy Observatory, 2020. [Online]. Available:                                              https://public.nrao.edu/telescopes/radio-telescopes/. [Accessed: 23- Sep- 2020].  
+[3] "SKA Science - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/science/. [Accessed: 24-      Sep- 2020].  
+[4] "Galaxy Evolution, Cosmology and Dark Energy - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available:      https://www.skatelescope.org/galaxyevolution/. [Accessed:      24- Sep- 2020].  
 [5] "Cosmic Magnetism - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/magnetism/. [Accessed: 24- Sep- 2020].  
 [6] "Probing the Cosmic Dawn - Public Website", SQUARE KILOMETRE ARRAY, 2020. [Online]. Available: https://www.skatelescope.org/cosmicdawn/. [Accessed: 24- Sep- 2020].  
 [7] L. Sierra, "Are we alone in the universe? Revisiting the Drake equation", Exoplanet Exploration: Planets Beyond our Solar System, 2020. [Online]. Available: https://exoplanets.nasa.gov/news/1350/are-we-alone-in-the-universe-revisiting-the-drake-equation/. [Accessed: 24- Sep- 2020].  
