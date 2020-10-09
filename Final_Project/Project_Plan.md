@@ -11,3 +11,4 @@ The overall topic of the project will include investigating how a host of Big Da
 
 While some insights from the data can come during or directly after the growing “season”, some requires the produce to hit the shelves or to be used to create various food products. This means monitoring continues through the logistics process, and this data is integral when it comes to the end result of the produce. 
 
+The end goal is to investigate and implement a scalable solution that follows the farmers crops from seed to consumers tables and optimizes the process along the way. Although indoor farms allow for great control, it is important to understand that there are many costs that are not associated with traditional farms. This means that to make the farming endeavor sustainable, optimization is important.
