@@ -2,7 +2,7 @@
 
 ## Team
 
-Cody Harris
+Cody Harris  
 harrcody@iu.edu
 
 ## Topic Discussion
