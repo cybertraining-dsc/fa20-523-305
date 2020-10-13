@@ -1,7 +1,6 @@
 # How Big Data Technologies Can Improve Indoor Agriculture
 
-Cody Harris
-harrcody@iu.edu
+Cody Harris, harrcody@iu.edu, fa20-523-305
 
 {{% pageinfo %}}
 
