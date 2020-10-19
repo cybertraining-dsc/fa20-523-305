@@ -10,8 +10,8 @@ Cody Harris, harrcody@iu.edu, fa20-523-305
 
 ## Abstract
 
-As the world is gripped with finding solutions to problems such as food and water shortages, the study of agriculture could improve where we stand with both of these problems. By integrating weather and sensor data, a model could be created to estimate soil moisture based on on weather data. While some farmers could afford to have many moisture sensors and monitor them, many would not have the funds or resources to keep track of the soil moisture long term. A solution would be to allow farmers to contract out a limited study of their land using sensors and then this model would be able to predict soil moistures from weather. 
-
+As the world is gripped with finding solutions to problems such as food and water shortages, the study of agriculture could improve where we stand with both of these problems. By integrating weather and sensor data, a model could be created to estimate soil moisture based on on weather data. While some farmers could afford to have many moisture sensors and monitor them, many would not have the funds or resources to keep track of the soil moisture long term. A solution would be to allow farmers to contract out a limited study of their land using sensors and then this model would be able to predict soil moistures from weather data.
+ 
 Contents
 
 {{< table_of_contents >}}
@@ -22,7 +22,7 @@ Contents
 
 ## Topic Discussion
 
-Maintaining correct soil moisture throughout the plant growing process can result in better yeilds, and less overall problems with the crop. 
+Maintaining correct soil moisture throughout the plant growing process can result in better yeilds, and less overall problems with the crop [^1]. 
 
 ## Dataset
 There are not any publicly available data sources that meet the needs of this project. In order to accomplish the goal of building an analytics platform for an indoor farm and the related logistics, simulation data will be created. The simulation data will encompass many different situations that could be encountered and labeled by these issues. Along with possible issues, the data will include mostly satisfactory situations, as this is what the farmer is most likely to encounter.
@@ -50,3 +50,6 @@ Everything that has already been explained has more or less been attempted or im
 
 ### Extensions
 Not everything can be built or examined completely within the time constraints. Part of the project will be planning future updates or technologies that could improve the solution. One immediate future plan would be to incorporate cameras and computer vision to monitor the crops. Using images of plants, certain diseases, pests, or nutrient deficiencies can be seen as soon as they start to develop, giving the farmer the best odds at reversing the issue without effecting the harvest. Many of these issues cannot be greatly noticed with sensor data alone, which requires a farmer to constantly visually inspect crops. While this might not be terribly hard in some cases, some vertical grows might require large ladders to see all levels of the crop. This improvement could lead to less staff being required, which can allow more farmers to grow more for less money. 
+
+## References
+[^1] O. Denmead and R. Shaw, "The Effects of Soil Moisture Stress at Different Stages of Growth on the Development and Yield of Corn 1", Agronomy Journal, vol. 52, no. 5, pp. 272-274, 1960. Available: 10.2134/agronj1960.00021962005200050010x.
