@@ -31,6 +31,8 @@ This project specifically seeks to see the effect of weather on a particular pie
 
 The first data set comes from NOAA and contains daily summary data in regards to various 
 
+<img src="https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/resources/distance_map.png" data-canonical-src="https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/resources/distance_map.png" width="350" height="350" />
+
 
 
 ## References
