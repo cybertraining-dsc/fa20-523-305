@@ -31,7 +31,7 @@ This project specifically seeks to see the effect of weather on a particular pie
 
 The first data set comes from NOAA and contains daily summary data in regards to various 
 
-![Map showing distance between weather data collection and farm](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/resources/distance_map.png "Distance Map")
+![Map showing distance between weather data collection and farm](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/resources/distance_map.png "Distance Map" =300x300)
 
 
 ## References
