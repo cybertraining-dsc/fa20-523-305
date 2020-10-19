@@ -1,9 +1,6 @@
 # Estimating Soil Moisture Content Using Sensor and Weather Data
 
 ## Team
-Cody Harris
-harrcody@iu.edu
-=======
 Cody Harris, harrcody@iu.edu, [fa20-523-305](https://github.com/cybertraining-dsc/fa20-523-305), [Edit](https://github.com/cybertraining-dsc/fa20-523-305/edit/master/project/project.md)
 
 {{% pageinfo %}}
@@ -18,7 +15,7 @@ Contents
 
 {{% /pageinfo %}}
 
-**Keywords:** agriculture
+**Keywords:** agriculture, soil moisture, IoT
 
 ## Topic Discussion
 
@@ -28,11 +25,11 @@ For hundreds of years, farmers have done something similar to this model. The di
 
 The model created could be used in various ways. The first main use is to be able to monitor what is currently happening in the soil so that changes can be made to correct the issue if there is one. Secondly, a farmer could evaluate historical data and compare it to yeilds or other results of the harvest and use this analytical information to inform future descions.
 
-This project specifically seeks to see the effect of weather on a particular piece of land in Washington state. This process could be done all over the world to obtain 
+This project specifically seeks to see the effect of weather on a particular piece of land in Washington state. This process could be done all over the world to obtain benchmarks. These benchmarks could be a cheap option for a farmer that does not have the funds to support a full study of water usage on their land. Instead, they could look for a model that has land that has similar soil and or geographical features, and then use their own weather data to estimate their soil moisture content.
 
-## Dataset
+## Datasets
 
-
+The first data set comes from NOAA and contains daily summary data in regards to various 
 
 
 
