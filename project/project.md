@@ -1,6 +1,5 @@
 # Estimating Soil Moisture Content Using Sensor and Weather Data
 
-## Team
 Cody Harris, harrcody@iu.edu, [fa20-523-305](https://github.com/cybertraining-dsc/fa20-523-305), [Edit](https://github.com/cybertraining-dsc/fa20-523-305/edit/master/project/project.md)
 
 {{% pageinfo %}}
