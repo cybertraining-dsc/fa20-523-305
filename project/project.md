@@ -49,7 +49,43 @@ Once the data is sufficiently clean, some choices have to be made on joining the
 
 ## Preliminary Analysis and EDA
 
+Before building a machine learning model, it is important to get a general idea of how the data looks, to see if any insights can be made right away.
 
+The first two visualizations are grids that show the entire distribution of measurements across each sensor. The first grid is the volume of water at 30 cm, and the second grid is the water volume at 150 cm. Each chart could be looked at and examined on it's own, but what is most important to note is the variability of the measures from location to location. These different sensors are not that far away, but show that different areas of the farm do retain water in different ways. 
+
+The third and fourth grid shows the temperature at 150 cm, the results are what would logically be expected. The different sensors do not show much variance from location to location.
+
+A simple bar chart is used to get a quick overview of the percipitation values over the same time period to see the overall trends. The most interesting part of this analysis is from the end of 2009 to nearly 2012. There is very little percipitation in this time period. Which initially looks like an issue with the data, but when it is compared to the water volume charts, a correlation can be seen. It isn't perfect, but in many of the sensors that have data in this period, the moisture seems rather constant.
+
+## Plan for the rest of the Semseter
+
+The following is a plan for the rest of the semester, using the due dates for Assignments 8-11 as milestone dates
+
+### October 26
+
+- Further EDA (make charts more presentable)  
+- Create multiple data sets that allow for the training data to include the past N days of weather
+- Brainstorm ideas for feature engineering and build features
+- Test various ML methods using scikit-learn to get an early idea of possible models, and to have a baseline for comparison  
+- Update report
+
+### November 2
+
+- Tune hyperparameters for selected ML model  
+- Evalutate deep learning frameworks (Keras, PyTorch, scikit-learn also has NN functionalities)  
+- Try to implement simple deep learning model  
+- Update report
+
+### November 9
+
+- Further tune and tweak models  
+- Start analyzing various models and techniques to find the most accurate model
+- Update report
+
+### November 16
+
+- Build a library/program that can pull weather data from NOAA and takes sensor input and outputs predictions of soil moisture by area
+- Finalize report and findings
 
 ## References
 [^1]: O. Denmead and R. Shaw, "The Effects of Soil Moisture Stress at Different Stages of Growth on the Development and Yield of Corn 1", Agronomy Journal, vol. 52, no. 5, pp. 272-274, 1960. Available: 10.2134/agronj1960.00021962005200050010x.
