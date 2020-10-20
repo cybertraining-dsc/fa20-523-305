@@ -30,7 +30,7 @@ This project specifically seeks to see the effect of weather on a particular pie
 
 The first data set comes from NOAA and contains daily summary data in regards to various measurments such as temperature, percipitation, wind speed, etc. For this project, only data that came from the closest station to the field will be used [^2]. In this case, that is the Pullman station at the Pullman-Moscow airport. Below is an image showing the weather data collection location, and the red pin is at the longitude and lattitude of one of the sensors in the field. This data is in csv format (see Figure 1).
 
-![Figure 1](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/resources/distance_map.png)
+![Figure 1](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/images/distance_map.png)
 
 **Figure 1:** Caption missing 
 
@@ -39,7 +39,7 @@ The second dataset comes from the USDA. This dataset consits of "hourly and dail
 
 Within the data, there are GIS file types that can be imported into Google Maps desktop to visualize the locations of the sensors and other geographical information. Below is an example of the sensor locations plotted on the sattelite image (see Figure 2).
 
-![Figure 2](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/resources/sensor_locations.png)
+![Figure 2](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/images/sensor_locations.png)
 
 **Figure 2:** Caption missing 
 
@@ -62,7 +62,7 @@ The third and fourth grid shows the temperature at 150 cm, the results are what 
 
 A simple bar chart is used to get a quick overview of the percipitation values over the same time period to see the overall trends. The most interesting part of this analysis is from the end of 2009 to nearly 2012. There is very little percipitation in this time period. Which initially looks like an issue with the data, but when it is compared to the water volume charts, a correlation can be seen. It isn't perfect, but in many of the sensors that have data in this period, the moisture seems rather constant.
 
-*Note*: After doing this analysis using the Altair library in python, the notebook became way too big due to the size of the data. As a quick remedy for this, I saved the visualizations as PNG and saved them in the resources folder. They are named: one, two, three, and four, for the order that they are mentioned in the above section. I will remove the eda notebook from the repo.
+*Note*: After doing this analysis using the Altair library in python, the notebook became way too big due to the size of the data. As a quick remedy for this, I saved the visualizations as PNG and saved them in the images folder. They are named: one, two, three, and four, for the order that they are mentioned in the above section. I will remove the eda notebook from the repo.
 
 ## Plan for the rest of the Semseter
 
