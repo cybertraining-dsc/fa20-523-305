@@ -26,7 +26,7 @@ Radiologists using these deep learning tools, will require a great deal of train
 
 ## References
 
-[1] "Different Imaging Tests Explained | UVA Radiology", UVA Radiology and Medical Imaging Blog for Patients, 2019. [Online]. Available: https://blog.radiology.virginia.edu/different-imaging-tests-explained/. [Accessed: 20- Oct- 2020].
+[1] "Different Imaging Tests Explained | UVA Radiology", UVA Radiology and Medical Imaging Blog for Patients, 2019. [Online]. Available: <https://blog.radiology.virginia.edu/different-imaging-tests-explained/>. [Accessed: 20- Oct- 2020].
 
 [2] "Diffusion Tensor Imaging (DTI) | Psychiatry Neuroimaging Laboratory", Pnl.bwh.harvard.edu, 2020. [Online]. Available: http://pnl.bwh.harvard.edu/portfolio-item/diffusion-tensor-imaging-dti/. [Accessed: 20- Oct- 2020].
 
