@@ -1,7 +1,5 @@
 # Estimating Soil Moisture Content Using Sensor and Weather Data
 
-- [ ] please use proper image inclusion and not img
-
 Cody Harris, harrcody@iu.edu, [fa20-523-305](https://github.com/cybertraining-dsc/fa20-523-305), [Edit](https://github.com/cybertraining-dsc/fa20-523-305/edit/master/project/project.md)
 
 {{% pageinfo %}}
@@ -30,18 +28,21 @@ This project specifically seeks to see the effect of weather on a particular pie
 
 ## Datasets
 
-The first data set comes from NOAA and contains daily summary data in regards to various measurments such as temperature, percipitation, wind speed, etc. For this project, only data that came from the closest station to the field will be used [^2]. In this case, that is the Pullman station at the Pullman-Moscow airport. Below is an image showing the weather data collection location, and the red pin is at the longitude and lattitude of one of the sensors in the field. This data is in csv format.
+The first data set comes from NOAA and contains daily summary data in regards to various measurments such as temperature, percipitation, wind speed, etc. For this project, only data that came from the closest station to the field will be used [^2]. In this case, that is the Pullman station at the Pullman-Moscow airport. Below is an image showing the weather data collection location, and the red pin is at the longitude and lattitude of one of the sensors in the field. This data is in csv format (see Figure 1).
 
-![Figure 1: Caption missing](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/resources/distance_map.png)
+![Figure 1](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/resources/distance_map.png)
 
 **Figure 1:** Caption missing 
 
 
 The second dataset comes from the USDA. This dataset consits of "hourly and daily measurements of volumetric water content, soil temperature, and bulk electrical conductivity, collected at 42 monitoring locations and 5 depths (30, 60, 90, 120, and 150 cm)" at a farm in Washington state [^3]. Mainly, the daily temperature and water conent are the measurements of interest. There are multiple files that have data that corresponds to what plants are being grown in specific places, and the make up of the soil at each sensor cite. This auxilary information could be used in later models once the base model has been completed. This data is in tab delimited files.
 
-Within the data, there are GIS file types that can be imported into Google Maps desktop to visualize the locations of the sensors and other geographical information. Below is an example of the sensor locations plotted on the sattelite image.
+Within the data, there are GIS file types that can be imported into Google Maps desktop to visualize the locations of the sensors and other geographical information. Below is an example of the sensor locations plotted on the sattelite image (see Figure 2).
 
-<img src="https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/resources/sensor_locations.png" data-canonical-src="https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/resources/sensor_locations.png" width="651" height="280" />
+![Figure 2](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/resources/sensor_locations.png)
+
+**Figure 2:** Caption missing 
+
 
 ## Data Cleaning and Aggregation
 
