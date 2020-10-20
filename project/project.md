@@ -57,6 +57,8 @@ The third and fourth grid shows the temperature at 150 cm, the results are what 
 
 A simple bar chart is used to get a quick overview of the percipitation values over the same time period to see the overall trends. The most interesting part of this analysis is from the end of 2009 to nearly 2012. There is very little percipitation in this time period. Which initially looks like an issue with the data, but when it is compared to the water volume charts, a correlation can be seen. It isn't perfect, but in many of the sensors that have data in this period, the moisture seems rather constant.
 
+*Note*: After doing this analysis using the Altair library in python, the notebook became way too big due to the size of the data. As a quick remedy for this, I saved the visualizations as PNG and saved them in the resources folder. They are named: one, two, three, and four, for the order that they are mentioned in the above section. I will remove the eda notebook from the repo.
+
 ## Plan for the rest of the Semseter
 
 The following is a plan for the rest of the semester, using the due dates for Assignments 8-11 as milestone dates
