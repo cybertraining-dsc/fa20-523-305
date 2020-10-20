@@ -47,6 +47,8 @@ Next, the weather data needs some small adjustments. This is mostly in the form 
 
 Once the data is sufficiently clean, some choices have to be made on joining the data. The simplist route would be to join the weather measurements directly with the same day the soil measurement, however, the previous days weather is likely to also have an impact on the moisture. In the same fashion, the weather for the 5 previous days might all have a large impact on the moisture. So simply joining the two data sets right now is likely not the correct course of action until further analysis is made.
 
+## Preliminary Analysis and EDA
+
 
 
 ## References
