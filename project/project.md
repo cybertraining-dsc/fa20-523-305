@@ -70,7 +70,8 @@ The following is a plan for the rest of the semester, using the due dates for As
 
 ### October 26
 
-- Further EDA (make charts more presentable)  
+- Further EDA (make charts more presentable) 
+- Create pipeline to clean and manipulate data from raw
 - Create multiple data sets that allow for the training data to include the past N days of weather
 - Brainstorm ideas for feature engineering and build features
 - Test various ML methods using scikit-learn to get an early idea of possible models, and to have a baseline for comparison  
