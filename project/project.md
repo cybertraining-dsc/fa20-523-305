@@ -32,7 +32,7 @@ The first data set comes from NOAA and contains daily summary data in regards to
 
 ![Figure 1](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/images/distance_map.png)
 
-**Figure 1:** Caption missing 
+**Figure 1:** Estimated distance from weather reports to the crop fields. Distance is calculated using Google Maps
 
 
 The second dataset comes from the USDA. This dataset consits of "hourly and daily measurements of volumetric water content, soil temperature, and bulk electrical conductivity, collected at 42 monitoring locations and 5 depths (30, 60, 90, 120, and 150 cm)" at a farm in Washington state [^3]. Mainly, the daily temperature and water conent are the measurements of interest. There are multiple files that have data that corresponds to what plants are being grown in specific places, and the make up of the soil at each sensor cite. This auxilary information could be used in later models once the base model has been completed. This data is in tab delimited files.
@@ -41,7 +41,7 @@ Within the data, there are GIS file types that can be imported into Google Maps 
 
 ![Figure 2](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/images/sensor_locations.png)
 
-**Figure 2:** Caption missing 
+**Figure 2:** Location of sensors within the test field
 
 
 ## Data Cleaning and Aggregation
