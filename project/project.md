@@ -76,6 +76,10 @@ As far as text and categorical features, the imputer will be used to fill in mis
 
 Lastly the date pipeline will take datetimes and convert them to integers that represent how many seconds it has been since 1970. This will allow dates to be handled as numerical values if they are used as an estimator instead of being used as a categorical feature as there would be many categories.
 
+## Multiple Models for Multiple Soil Depths
+
+There are a few different approaches for modeling for this particular problem. The issue is that we have multiple things we would like to predict with the same predictors. It is unlikely that the model that predicts for a depth of 30 cm, would accurately predict for a depth of 150 cm. In order to adjust the models, a seperate model will be created for each depth, with that said, the predictors are all the same for each depth, but the trained output is different. To accomplish this, five different datasets were constructed, each one representing a depth. All rows in which the predicted value is not avaliable for that depth were pruned from the dataset. 
+
 ## Splitting Data into Train and Test
 
 In order to test any model created, there must be a split between test and training data. This is done by using a function in sk-learn. In this case, there are about 76k rows in the data set. For the training data, 80% of the total data will be used, or about 60.8k records. The split is done after shuffling the rows so that it does not just pick the top 80% everytime. Lastly the data is split using a stratified method. As we want to have models that take the specific area of the field into account, that means that we need to have the different areas of the field represented equally in both the training and testing dataset. This means that if 10% of the data came from sensor CAF0003, then roughly 10% of the training data will come from CAF0003 as well as 10% of the test data will be from this location.
@@ -92,20 +96,30 @@ A simple bar chart is used to get a quick overview of the percipitation values o
 
 *Note*: After doing this analysis using the Altair library in python, the notebook became way too big due to the size of the data. As a quick remedy for this, I saved the visualizations as PNG and saved them in the images folder. They are named: one, two, three, and four, for the order that they are mentioned in the above section. I will remove the eda notebook from the repo.
 
+## Initial Model Testing (Regressor)
+
+Once the pipelines were setup, the first model could be tested for accuracy. As the output data is continuous in nature, the easiest machine learning algoritm to test to make sure everything is correct, was a linear regression model. It seems fairly likely that a linear regression model would do rather well with this data. The weather is the driving factor in soil moisture in a non-irrigated field, so this test is a litmus test to make sure that the data is good and provide a baseline measurment for future models. The experiment log below shows the returned values from the test that was run. Over the course of experimentation, a log such as this will be kept.
+
+The results are as follows:
+
+| Experiment | Depth | Fit_Time | Pred_Time | r2_score |
+| ------------- | ------------- |
+| First Linear Reg  | 30cm  | 58.701572 | 0.238179 | 0.890208 |
+| First Linear Reg  | 30cm  | 58.701572 | 0.238179 | 0.890208 |
+| First Linear Reg  | 30cm  | 58.701572 | 0.238179 | 0.890208 |
+| First Linear Reg  | 30cm  | 58.701572 | 0.238179 | 0.890208 |
+| First Linear Reg  | 30cm  | 58.701572 | 0.238179 | 0.890208 |
+
+## Model Testing (Classifier)
 
 ## Plan for the rest of the Semseter
 
 The following is a plan for the rest of the semester, using the due dates for Assignments 8-11 as milestone dates
 
-### November 2
-
-- Tune hyperparameters for selected ML model  
-- Evalutate deep learning frameworks (Keras, PyTorch, scikit-learn also has NN functionalities)  
-- Try to implement simple deep learning model  
-- Update report
-
 ### November 9
 
+- Tune Hyper-parameters
+- Test various models
 - Further tune and tweak models  
 - Start analyzing various models and techniques to find the most accurate model
 - Update report
