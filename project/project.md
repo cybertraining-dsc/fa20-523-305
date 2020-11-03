@@ -105,13 +105,18 @@ The results are as follows:
 | Experiment | Depth | Fit_Time | Pred_Time | r2_score |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | First Linear Reg  | 30cm  | 58.701572 | 0.238179 | 0.890208 |
-| First Linear Reg  | 30cm  | 58.701572 | 0.238179 | 0.890208 |
-| First Linear Reg  | 30cm  | 58.701572 | 0.238179 | 0.890208 |
-| First Linear Reg  | 30cm  | 58.701572 | 0.238179 | 0.890208 |
-| First Linear Reg  | 30cm  | 58.701572 | 0.238179 | 0.890208 |
+| First Linear Reg  | 60cm  | 58.847758 | 0.169551 | 0.898520 |
+| First Linear Reg  | 90cm  | 54.927837 | 0.172255 | 0.882179 |
+| First Linear Reg  | 120cm  | 64.877650 | 0.197685 | 0.884033 |
+| First Linear Reg  | 150cm  | 63.256277 | 0.170247 | 0.876900 |
 
+These results show that the data is pretty well correlated and that there is reason to believe that we could predict soil moisture from weather alone. Although an r^2 of around 0.87-0.89 are pretty good, with such highly related predictors, there is definitely room for model improvement. 
 
 ## Model Testing (Classifier)
+
+While the output is continuous, there is an argument to use a categorical classifier model. For a specific plant, an optimal moisture range could be studied. For example sake, the range could be 0.2-0.4 units. Then it would not matter if the soil is 0.2 or 0.3, both would be in the acceptable range. With this in mind, certain levels could be created to alert the farmer of which category they could be experienecing. For example there might be five levels: too dry, acceptable dryness, optimal, acceptable wetness, and too wet. The training data could be adjusted to fit into these categories. 
+
+Further experimentation will be required to decide if this is truly the best route for the model. This idea seems promising as predicting the exact moisture content is not as important as understanding the toleraable ranges. 
 
 ## Plan for the rest of the Semseter
 
