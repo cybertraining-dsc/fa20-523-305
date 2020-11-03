@@ -110,6 +110,10 @@ The results are as follows:
 | First Linear Reg  | 30cm  | 58.701572 | 0.238179 | 0.890208 |
 | First Linear Reg  | 30cm  | 58.701572 | 0.238179 | 0.890208 |
 
+
+|  R |  Python |    Matlab |
+| --------- |:---|:---------|:-----|
+| library(tidyverse) |import numpy as np|
 ## Model Testing (Classifier)
 
 ## Plan for the rest of the Semseter
