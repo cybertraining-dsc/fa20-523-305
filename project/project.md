@@ -137,18 +137,13 @@ Further experimentation will be required to decide if this is truly the best rou
 
 The following is a plan for the rest of the semester, using the due dates for Assignments 8-11 as milestone dates
 
-### November 9
+### November 16
 
 - Tune Hyper-parameters
 - Test various models
 - Further tune and tweak models  
 - Start analyzing various models and techniques to find the most accurate model
 - Update report
-
-### November 16
-
-- Build a library/program that can pull weather data from NOAA and takes sensor input and outputs predictions of soil moisture by area
-- Finalize report and findings
 
 ## References
 
