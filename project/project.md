@@ -11,7 +11,9 @@ Cody Harris, harrcody@iu.edu, [fa20-523-305](https://github.com/cybertraining-ds
 As the world is gripped with finding solutions to problems such as food and water shortages, the study of agriculture could improve where we stand with both of these problems. By integrating weather and sensor data, a model could be created to estimate soil moisture based on on weather data. While some farmers could afford to have many moisture sensors and monitor them, many would not have the funds or resources to keep track of the soil moisture long term. A solution would be to allow farmers to contract out a limited study of their land using sensors and then this model would be able to predict soil moistures from weather data.
  
 Contents
+
 {{< table_of_contents >}}
+
 {{% /pageinfo %}}
 
 **Keywords:** agriculture, soil moisture, IoT
