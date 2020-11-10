@@ -18,7 +18,7 @@ Contents
 
 **Keywords:** agriculture, soil moisture, IoT
 
-## Background
+## 1. Background
 
 Understanding how weather impacts soil moisture is something that has been studied in various ways, all because it is a driving factor in crop success. Multiple studies have sought to apply a deterministic approach to calculating soil moisture based on observational weather data. 
 
@@ -33,7 +33,7 @@ Multiple publidcations have sought to come up with complete hydrological models 
 
 The relationship between soil moisture and weather patterns is one with a rich history of study. Both of these measures effect each other in various ways. Most studies that sought to quantify this relationship were conducted at a time in which large scale sensor arrays could not have been implemented in a field. With the prevalance of IoT and improved sensing technologies, it seems as though there might not be a need to use predictive models for soil moisture, but instead just use sensor data. While this could be true in some applications, a wide array of challenges occur when trying to maintain these sensor arrays. Problems such as charging or replacing batteries, sensor and relay equipment not working if completely buried, but are in the way of farming if mounted above ground, sensors failing, etc. These were real challenges faced by the farm in which the soil moisture data was collected [^7]. The objective of this project is to create predictive models based on limited training data so that farmers would not need to deal with sensor arrays indefinitely.
 
-## Topic Discussion
+## 2. Topic Discussion
 
 Maintaining correct soil moisture throughout the plant growing process can result in better yeilds, and less overall problems with the crop. Water deficiencies or surplus at various stages of growth have different effects, or even negligable effects[^1]. It is important to have an idea of how your land consumes and stores water, which could be very different based on the plants being used, and variation of elevation and geography.
 
@@ -43,7 +43,7 @@ The model created could be used in various ways. The first main use is to be abl
 
 This project specifically seeks to see the effect of weather on a particular piece of land in Washington state. This process could be done all over the world to obtain benchmarks. These benchmarks could be a cheap option for a farmer that does not have the funds to support a full study of water usage on their land. Instead, they could look for a model that has land that has similar soil and or geographical features, and then use their own weather data to estimate their soil moisture content.
 
-## Datasets
+## 3. Datasets
 
 The first data set comes from NOAA and contains daily summary data in regards to various measurments such as temperature, percipitation, wind speed, etc. For this project, only data that came from the closest station to the field will be used [^2]. In this case, that is the Pullman station at the Pullman-Moscow airport. Below is an image showing the weather data collection location, and the red pin is at the longitude and lattitude of one of the sensors in the field. This data is in csv format (see Figure 1).
 
@@ -61,7 +61,7 @@ Within the data, there are GIS file types that can be imported into Google Maps 
 **Figure 2:** Location of sensors within the test field
 
 
-## Data Cleaning and Aggregation
+## 4. Data Cleaning and Aggregation
 
 The first step is to get the soil moisture data into a combined format, currently it is in one file per sensor, and there are 42 sensors. See the data_cleaning_aggregation.ipynb file to see how this was done. After aggregation, some basic information can be checked about the data. For instance, there is quite a bit of NAs in the data. These NAs are just instances where there was no measurement on that day. There is about 45% NAs in the measurement columns. To further clean the data, any row that has only NAs for the measurements will be removed.
 
@@ -69,23 +69,23 @@ Next, the weather data needs some small adjustments. This is mostly in the form 
 
 Once the data is sufficiently clean, some choices have to be made on joining the data. The simplist route would be to join the weather measurements directly with the same day the soil measurement, however, the previous days weather is likely to also have an impact on the moisture. In the same fashion, the weather for the 5 previous days might all have a large impact on the moisture. So simply joining the two data sets right now is likely not the correct course of action until further analysis is made.
 
-## Pipeline for Preprocessing
+## 5. Pipeline for Preprocessing
 
 Before feeding the data through a machine learning algorithm, the data needs to be manipulated in such a way that it is ready to be directly fed into an algorithm. This includes joining the two data sets, feature engineering, and other tasks that prepare the data. This will need to be done every time a new dataset is being used, so this must be built in a repeatable way. The machine learning library scikit-learn incoroporates something called "pipelines" that can allow processed to be sequentially done to a dataframe. For purposes of this project two pipelines will be built, one will be used for feature engineering and joining the data, the other will be used to handle preparation of numerical, categorical, and date data.
 
-### Loading and Joining Data
+### 5.1 Loading and Joining Data
 
 This is the first step of the entire pipeline. This is where both the weather, and the soil moisture data are read in from csv files in their raw fromat. The soil moisture data is found in many different files, and these all need to be combined. After combining the fies, any lines that are full of NAs for the measurements are dropped. Next the weather data is loaded in. Both files have a date field which is the field they will be joined on. To make things consistent, both of these fields need to set be date format. 
 
 When it comes to joining the data, each row should include the moisture content at various depths, as well as the weather information from the past ten days. While this creates a great deal of redundant data, the data is small enough that this is not an issue. Experiments will be done to evaluate just how many days of prior weather data are needed to form accurate results, while trying to minimize the number of the days.
 
-### Feature Engineering
+### 5.2 Feature Engineering
 
 Currently only one feature is added, and this is a boolean flag that says whether it rained or not on a certain day. The thought behind this is, that for some days prior to the current measurement, the amount of rain might be needed, but for other days, such as 10 days prior, it might be more important to just know if there was rain or not. This feature is engineered within the pipeline. 
 
 A future feature will be to use the months as categorical variables. While the date might be helpful, it probably is more accurate to consider the month then the specific day.
 
-### Generic Pipeline
+### 5.3 Generic Pipeline
 
 After doing operations that are specific to the current dataset, some built in processors from sk-learn are used to make sure the data can be used in a machine learning model. This means that for numerical data types, the pipeline will fill in missing values with 0 instead of leaving them as NaN. There might be experiements to decide how to deal with missing measurements. Also the various numerical fields must be standardized, this is important for models such as linear regression so one large variable isn't dominating the model.
 
@@ -93,15 +93,15 @@ As far as text and categorical features, the imputer will be used to fill in mis
 
 Lastly the date pipeline will take datetimes and convert them to integers that represent how many seconds it has been since 1970. This will allow dates to be handled as numerical values if they are used as an estimator instead of being used as a categorical feature as there would be many categories.
 
-## Multiple Models for Multiple Soil Depths
+## 6. Multiple Models for Multiple Soil Depths
 
 There are a few different approaches for modeling for this particular problem. The issue is that we have multiple things we would like to predict with the same predictors. It is unlikely that the model that predicts for a depth of 30 cm, would accurately predict for a depth of 150 cm. In order to adjust the models, a seperate model will be created for each depth, with that said, the predictors are all the same for each depth, but the trained output is different. To accomplish this, five different datasets were constructed, each one representing a depth. All rows in which the predicted value is not avaliable for that depth were pruned from the dataset. 
 
-## Splitting Data into Train and Test
+## 7. Splitting Data into Train and Test
 
 In order to test any model created, there must be a split between test and training data. This is done by using a function in sk-learn. In this case, there are about 76k rows in the data set. For the training data, 80% of the total data will be used, or about 60.8k records. The split is done after shuffling the rows so that it does not just pick the top 80% everytime. Lastly the data is split using a stratified method. As we want to have models that take the specific area of the field into account, that means that we need to have the different areas of the field represented equally in both the training and testing dataset. This means that if 10% of the data came from sensor CAF0003, then roughly 10% of the training data will come from CAF0003 as well as 10% of the test data will be from this location.
 
-## Preliminary Analysis and EDA
+## 8. Preliminary Analysis and EDA
 
 Before building a machine learning model, it is important to get a general idea of how the data looks, to see if any insights can be made right away.
 
@@ -113,7 +113,7 @@ A simple bar chart is used to get a quick overview of the percipitation values o
 
 *Note*: After doing this analysis using the Altair library in python, the notebook became way too big due to the size of the data. As a quick remedy for this, I saved the visualizations as PNG and saved them in the images folder. They are named: one, two, three, and four, for the order that they are mentioned in the above section. I will remove the eda notebook from the repo.
 
-## Initial Model Testing (Regressor)
+## 9. Initial Model Testing (Regressor)
 
 Once the pipelines were setup, the first model could be tested for accuracy. As the output data is continuous in nature, the easiest machine learning algoritm to test to make sure everything is correct, was a linear regression model. It seems fairly likely that a linear regression model would do rather well with this data. The weather is the driving factor in soil moisture in a non-irrigated field, so this test is a litmus test to make sure that the data is good and provide a baseline measurment for future models. The experiment log below shows the returned values from the test that was run. Over the course of experimentation, a log such as this will be kept.
 
@@ -129,7 +129,7 @@ The results are as follows:
 
 These results show that the data is pretty well correlated and that there is reason to believe that we could predict soil moisture from weather alone. Although an r^2 of around 0.87-0.89 are pretty good, with such highly related predictors, there is definitely room for model improvement. 
 
-## Model Testing (Classifier)
+## 10. Model Testing (Classifier)
 
 While the output is continuous, there is an argument to use a categorical classifier model. For a specific plant, an optimal moisture range could be studied. For example sake, the range could be 0.2-0.4 units. Then it would not matter if the soil is 0.2 or 0.3, both would be in the acceptable range. With this in mind, certain levels could be created to alert the farmer of which category they could be experienecing. For example there might be five levels: too dry, acceptable dryness, optimal, acceptable wetness, and too wet. The training data could be adjusted to fit into these categories. 
 
@@ -147,7 +147,7 @@ The following is a plan for the rest of the semester, using the due dates for As
 - Start analyzing various models and techniques to find the most accurate model
 - Update report
 
-## References
+## 11. References
 
 [^1]: O. Denmead and R. Shaw, "The Effects of Soil Moisture Stress at Different Stages of Growth on the Development and Yield of Corn 1", Agronomy Journal, vol. 52, no. 5, pp. 272-274, 1960. Available: 10.2134/agronj1960.00021962005200050010x.
 
