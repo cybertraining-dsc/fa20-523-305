@@ -163,7 +163,7 @@ The following is a plan for the rest of the semester, using the due dates for As
 
 [^4]: K. Shang, S. Wang, Y. Ma, Z. Zhou, J. Wang, H. Liu and Y. Wang, "A scheme for calculating soil moisture content by using routine weather data", Atmospheric Chemistry and Physics, vol. 7, no. 19, pp. 5197-5206, 2007 [Online]. Available: <https://hal.archives-ouvertes.fr/hal-00302825/document>
 
-[^5]: W. Capehart and T. Carlson, "Estimating near-surface soil moisture availability using a meteorologically driven soil-water profile model", Journal of Hydrology, vol. 160, no. 1-4, pp. 1-20, 1994 [Online]. Available: <https://d1wqtxts1xzle7.cloudfront.net/49029293/0022-1694_2894_2990031-020160922-30744-s4bk3h.pdf?1474528332=&response-content-disposition=inline%3B+filename%3DEstimating_near_surface_soil_moisture_av.pdf&Expires=1604966715&Signature=Q~p9g74lgChE6c7AfnE~Ep8179QUW~5HV0wpxotbyYtYONk-ns8Jku6oT9mTmKEw4wnix1Uol~zwOyxLObjdi8Cjg~LclJBo6CjFcxALrU1lpBnyzOML4hGOa9yiqEqwvrn3tG4tpsmysnOSznmj8kVTl2GGtMpblfyFl~x5QdwhcbVxvQrJDKRsdUsYOqfBeEiQahM7zgi8Gikrreh0AaLzM2GGpVcfXl8QD84XkbxdDJEinDAtWxW8yNKqrfNBnBqODCo9VusCXy-VJvJ9syFy5fTld~enjQfqHQtKyjszbXcNr1o~20uG78D8RlJyBnEECBh~M5miatLhhgig3Q__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA>
+[^5]: W. Capehart and T. Carlson, "Estimating near-surface soil moisture availability using a meteorologically driven soil-water profile model", Journal of Hydrology, vol. 160, no. 1-4, pp. 1-20, 1994 [Online]. Available: <https://tinyurl.com/yxjyuy5x>
 
 [^6]: F. Pan, C. Peters-Lidard and M. Sale, "An analytical method for predicting surface soil moisture from rainfall observations", Water Resources Research, vol. 39, no. 11, 2003 [Online]. Available: <https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2003WR002142>. [Accessed: 08- Nov- 2020]
 
