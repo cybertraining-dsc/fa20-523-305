@@ -120,13 +120,13 @@ Before building a machine learning model, it is important to get a general idea 
 
 The first two visualizations ((viz_1)[https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/images/one.png], (viz_2)[https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/images/two.png]) are grids that show the entire distribution of measurements across each sensor. The first grid is the volume of water at 30 cm, and the second grid is the water volume at 150 cm. Each chart could be looked at and examined on it's own, but what is most important to note is the variability of the measures from location to location. These different sensors are not that far away, but show that different areas of the farm do retain water in different ways. See Figure 3 for a small section of the grid from the visualization on the sensors at 30cm.
 
-![Figure 3](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/images/one_small.png)
+![Figure 3](https://raw.github.com/cybertraining-dsc/fa20-523-305/blob/master/project/images/one_small.png)
 
 **Figure 3:** Six locations soil moisture level over time at 30 cm depth
 
 The third and fourth grid shows the temperature at 150 cm, the results are what would logically be expected. The different sensors do not show much variance from location to location.
 
-![Figure 4](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/images/four_small.png)
+![Figure 4](https://raw.github.com/cybertraining-dsc/fa20-523-305/blob/master/project/images/four_small.png)
 
 **Figure 4:** Six locations soil temperature over time at 150 cm depth
 
