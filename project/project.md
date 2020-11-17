@@ -47,7 +47,7 @@ The relationship between soil moisture and weather patterns is one with a rich h
 
 The first data set comes from NOAA and contains daily summary data in regards to various measurements such as temperature, precipitation, wind speed, etc. For this project, only data that came from the closest station to the field will be used [^2]. In this case, that is the Pullman station at the Pullman-Moscow airport. Below is an image showing the weather data collection location, and the red pin is at the longitude and latitude of one of the sensors in the field. This data is in csv format (see Figure 1).
 
-![Figure 1](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/images/distance_map.png)
+![Figure 1](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/main/project/images/distance_map.png)
 
 **Figure 1:** Estimated distance from weather reports to the crop fields. Distance is calculated using Google Maps
 
@@ -55,14 +55,14 @@ The second dataset comes from the USDA. This dataset consists of "hourly and dai
 
 Within the data, there are GIS file types that can be imported into Google Maps desktop to visualize the locations of the sensors and other geographical information. Below is an example of the sensor locations plotted on the satellite image (see Figure 2).
 
-![Figure 2](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/images/sensor_locations.png)
+![Figure 2](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/main/project/images/sensor_locations.png)
 
 **Figure 2:** Location of sensors within the test field
 
 
 ## 4. Data Cleaning and Aggregation
 
-The first step is to get the soil moisture data into a combined format, currently it is in one file per sensor, and there are 42 sensors. See the [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/code/ml_pipeline.ipynb) file to see how this was done, specifically the section titled "Data Processing". After aggregation, some basic information can be checked about the data. For instance, there is quite a bit of NAs in the data. These NAs are just instances where there was no measurement on that day. There is about 45% NAs in the measurement columns. To further clean the data, any row that has only NAs for the measurements will be removed.
+The first step is to get the soil moisture data into a combined format, currently it is in one file per sensor, and there are 42 sensors. See the [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/main/project/code/ml_pipeline.ipynb) file to see how this was done, specifically the section titled "Data Processing". After aggregation, some basic information can be checked about the data. For instance, there is quite a bit of NAs in the data. These NAs are just instances where there was no measurement on that day. There is about 45% NAs in the measurement columns. To further clean the data, any row that has only NAs for the measurements will be removed.
 
 Next, the weather data needs some small adjustments. This is mostly in the form of removing columns that either are empty or have redundant data such as elevation, which is the same for every row. 
 
@@ -70,7 +70,7 @@ Once the data is sufficiently clean, some choices have to be made on joining the
 
 ## 5. Pipeline for Preprocessing
 
-Before feeding the data through a machine learning algorithm, the data needs to be manipulated in such a way that it is ready to be directly fed into an algorithm. This includes joining the two data sets, feature engineering, and other tasks that prepare the data. This will need to be done every time a new dataset is being used, so this must be built in a repeatable way. The machine learning library scikit-learn incorporates something called "pipelines" that can allow processed to be sequentially done to a dataframe. For purposes of this project two pipelines will be built, one will be used for feature engineering and joining the data, the other will be used to handle preparation of numerical, categorical, and date data. See sections: "Data Processing Pipeline" in [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/code/ml_pipeline.ipynb).
+Before feeding the data through a machine learning algorithm, the data needs to be manipulated in such a way that it is ready to be directly fed into an algorithm. This includes joining the two data sets, feature engineering, and other tasks that prepare the data. This will need to be done every time a new dataset is being used, so this must be built in a repeatable way. The machine learning library scikit-learn incorporates something called "pipelines" that can allow processed to be sequentially done to a dataframe. For purposes of this project two pipelines will be built, one will be used for feature engineering and joining the data, the other will be used to handle preparation of numerical, categorical, and date data. See sections: "Data Processing Pipeline" in [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/main/project/code/ml_pipeline.ipynb).
 
 ### 5.1 Loading and Joining Data
 
@@ -84,7 +84,7 @@ Currently only two features are added, the first is a boolean flag that says whe
 
 The next feature is a categorical feature that is the month of the year. It isn't very import to know the exact date of a measurement, but the month might be helpful in a model. This simplifies the model by not using date as a predictor, while still being able to capture this potentially important feature.
 
-An excerpt of the code used to create these two features, this comes from [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/code/ml_pipeline.ipynb).
+An excerpt of the code used to create these two features, this comes from [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/main/project/code/ml_pipeline.ipynb).
 
 ```python
 soil['Month'] = pd.DatetimeIndex(soil['Date']).month
@@ -118,15 +118,15 @@ In order to test any model created, there must be a split between test and train
 
 Before building a machine learning model, it is important to get a general idea of how the data looks, to see if any insights can be made right away. The actual visualizations were built using a python package called Altair. This created the visualizations well, but the actual notebook that would contain these images was too large to include in their entirety.
 
-The first two visualizations ([viz_1](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/images/one.png), [viz_2](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/images/two.png)) are grids that show the entire distribution of measurements across each sensor. The first grid is the volume of water at 30 cm, and the second grid is the water volume at 150 cm. Each chart could be looked at and examined on it's own, but what is most important to note is the variability of the measures from location to location. These different sensors are not that far away, but show that different areas of the farm do retain water in different ways. See Figure 3 for a small section of the grid from the visualization on the sensors at 30cm.
+The first two visualizations ([viz_1](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/main/project/images/one.png), [viz_2](https://github.com/cybertraining-dsc/fa20-523-305/blob/main/project/images/two.png)) are grids that show the entire distribution of measurements across each sensor. The first grid is the volume of water at 30 cm, and the second grid is the water volume at 150 cm. Each chart could be looked at and examined on it's own, but what is most important to note is the variability of the measures from location to location. These different sensors are not that far away, but show that different areas of the farm do retain water in different ways. See Figure 3 for a small section of the grid from the visualization on the sensors at 30cm.
 
-![Figure 3](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/images/one_small.png)
+![Figure 3](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/main/project/images/one_small.png)
 
 **Figure 3:** Six locations soil moisture level over time at 30 cm depth
 
 The third and fourth grid shows the temperature at 150 cm, the results are what would logically be expected. The different sensors do not show much variance from location to location.
 
-![Figure 4](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/master/project/images/four_small.png)
+![Figure 4](https://raw.githubusercontent.com/cybertraining-dsc/fa20-523-305/main/project/images/four_small.png)
 
 **Figure 4:** Six locations soil temperature over time at 150 cm depth
 
@@ -152,13 +152,13 @@ These results show that the data is pretty well correlated and that there is rea
 
 While the output is continuous, there is an argument to use a categorical classifier model. For a specific plant, an optimal moisture range could be studied. For examples sake, the range could be 0.2-0.4 units. Then it would not matter if the soil is 0.2 or 0.3, both would be in the acceptable range. With this in mind, certain levels could be created to alert the farmer of which category they could be experiencing. For example there might be five levels: too dry, acceptable dryness, optimal, acceptable wetness, and too wet. The training data could be adjusted to fit into these categories. 
 
-Code to create a categorical variable for each of the depth measurements can be found in the section "Make Classifier Label" in the file: [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/code/ml_pipeline.ipynb).
+Code to create a categorical variable for each of the depth measurements can be found in the section "Make Classifier Label" in the file: [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/main/project/code/ml_pipeline.ipynb).
 
 In the end, the decision to not use classifier methods was made. After using a regressor, the output could be converted to a categorical feature if the user or application so desired this. As our output is continuous in nature, precision would be lost.
 
 ## 11. Various Other Linear Regression Model Experiments
 
-The next set of experiments came up with the results in the following table. This was a test to see if baseline Lasso or Ridge Regression would improve on the basic linear regression model. Results and code for this portion can be found in [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/code/ml_pipeline.ipynb) under the "Linear Regression Tests" section. 
+The next set of experiments came up with the results in the following table. This was a test to see if baseline Lasso or Ridge Regression would improve on the basic linear regression model. Results and code for this portion can be found in [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/main/project/code/ml_pipeline.ipynb) under the "Linear Regression Tests" section. 
 
 | Experiment            | Depth | Fit_Time | Pred_Time | r2_score |
 |-----------------------|-------|----------|-----------|----------|
