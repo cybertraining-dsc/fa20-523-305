@@ -146,29 +146,19 @@ The results are as follows:
 | First Linear Reg | 120cm | 2.299457 | 0.18056   | 9.46E-01  |
 | First Linear Reg | 150cm | 2.573193 | 0.186042  | 9.43E-01  |
 
-These results show that the data is pretty well correlated and that there is reason to believe that we could predict soil moisture from weather alone. Although an r^2 of around 0.87-0.89 are pretty good, with such highly related predictors, there is definitely room for model improvement. 
+These results show that the data is pretty well correlated and that there is reason to believe that we could predict soil moisture from weather alone. Although an r^2 of around 0.916-0.949 are pretty good, with such highly related predictors, there is definitely room for model improvement. Also for a depth of 60 cm, something is not predicting correctly and is resulting in a small negative r^2
 
 ## 10. Model Testing (Classifier)
 
-While the output is continuous, there is an argument to use a categorical classifier model. For a specific plant, an optimal moisture range could be studied. For example sake, the range could be 0.2-0.4 units. Then it would not matter if the soil is 0.2 or 0.3, both would be in the acceptable range. With this in mind, certain levels could be created to alert the farmer of which category they could be experienecing. For example there might be five levels: too dry, acceptable dryness, optimal, acceptable wetness, and too wet. The training data could be adjusted to fit into these categories. 
+While the output is continuous, there is an argument to use a categorical classifier model. For a specific plant, an optimal moisture range could be studied. For examples sake, the range could be 0.2-0.4 units. Then it would not matter if the soil is 0.2 or 0.3, both would be in the acceptable range. With this in mind, certain levels could be created to alert the farmer of which category they could be experienecing. For example there might be five levels: too dry, acceptable dryness, optimal, acceptable wetness, and too wet. The training data could be adjusted to fit into these categories. 
 
-Further experimentation will be required to decide if this is truly the best route for the model. This idea seems promising as predicting the exact moisture content is not as important as understanding the toleraable ranges. 
+Code to create a categorical variable for each of the depth measurments can be found in the section "Make Classifier Label" in the file: [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/code/ml_pipeline.ipynb).
+
+In the end, the decision to not use classifier methods was made. After using a regressor, the output could be converted to a categorical feature if the user or application so desired this. As our output is continuous in nature, precision would be lost.
 
 ##  11. Conclusion
 
 TBD
-
-## Plan for the rest of the Semseter
-
-The following is a plan for the rest of the semester, using the due dates for Assignments 8-11 as milestone dates
-
-### November 16
-
-- Tune Hyper-parameters
-- Test various models
-- Further tune and tweak models  
-- Start analyzing various models and techniques to find the most accurate model
-- Update report
 
 ## 11. References
 
