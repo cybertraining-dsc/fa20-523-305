@@ -86,7 +86,7 @@ The next feature is a categorical feature that is the month of the year. It isn'
 
 An excerpt of the code used to create these two features, this comes from [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/code/ml_pipeline.ipynb).
 
-'''python
+```python
 soil['Month'] = pd.DatetimeIndex(soil['Date']).month
 
 for i in range(17):
@@ -96,7 +96,7 @@ for i in range(17):
     X[rain_y_n_name].loc[X[col_name] > 0] = 1
     X[rain_y_n_name].loc[X[col_name] == 0] = 0
     X[rain_y_n_name] = X[rain_y_n_name].astype('object')
-'''
+```
 
 ### 5.3 Generic Pipeline
 
