@@ -208,6 +208,8 @@ While there were great results in the different linear regression models, other 
 
 **Figure 7:** Further Linear Regression Experiment Results
 
+The random forest regressor performed amazingly in predicting the soil moisture. While the lower depths of soil did perform better than the depth of 30 cm.
+
 ##  11. Conclusion
 
 TBD
