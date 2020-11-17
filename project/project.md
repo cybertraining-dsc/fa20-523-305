@@ -74,15 +74,29 @@ Before feeding the data through a machine learning algorithm, the data needs to 
 
 ### 5.1 Loading and Joining Data
 
-This is the first step of the entire pipeline. This is where both the weather, and the soil moisture data are read in from csv files in their raw fromat. The soil moisture data is found in many different files, and these all need to be combined. After combining the fies, any lines that are full of NAs for the measurements are dropped. Next the weather data is loaded in. Both files have a date field which is the field they will be joined on. To make things consistent, both of these fields need to set be date format. 
+This is the first step of the entire pipeline. This is where both the weather, and the soil moisture data are read in from csv files in their raw format. The soil moisture data is found in many different files, and these all need to be combined. After combining the files, any lines that are full of NAs for the measurements are dropped. Next the weather data is loaded in. Both files have a date field which is the field they will be joined on. To make things consistent, both of these fields need to set be date format. 
 
 When it comes to joining the data, each row should include the moisture content at various depths, as well as the weather information from the past ten days. While this creates a great deal of redundant data, the data is small enough that this is not an issue. Experiments will be done to evaluate just how many days of prior weather data are needed to form accurate results, while trying to minimize the number of the days.
 
 ### 5.2 Feature Engineering
 
-Currently only one feature is added, and this is a boolean flag that says whether it rained or not on a certain day. The thought behind this is, that for some days prior to the current measurement, the amount of rain might be needed, but for other days, such as 10 days prior, it might be more important to just know if there was rain or not. This feature is engineered within the pipeline. 
+Currently only two features are added, the first is a boolean flag that says whether it rained or not on a certain day. The thought behind this is, that for some days prior to the current measurement, the amount of rain might be needed, but for other days, such as 10 days prior, it might be more important to just know if there was rain or not. This feature is engineered within the pipeline. 
 
-A future feature will be to use the months as categorical variables. While the date might be helpful, it probably is more accurate to consider the month then the specific day.
+The next feature is a categorical feature that is the month of the year. It isn't very import to know the exact date of a measurement, but the month might be helpful in a model. This simplifies the model by not using date as a predictor, while still being able to capture this potentially important feature.
+
+An excerpt of the code used to create these two features, this comes from [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/code/ml_pipeline.ipynb).
+
+'''python
+soil['Month'] = pd.DatetimeIndex(soil['Date']).month
+
+for i in range(17):
+    col_name = 'PRCP_' + str(i)
+    rain_y_n_name = 'RAIN_Y_N_' + str(i)
+    X[rain_y_n_name] = np.nan
+    X[rain_y_n_name].loc[X[col_name] > 0] = 1
+    X[rain_y_n_name].loc[X[col_name] == 0] = 0
+    X[rain_y_n_name] = X[rain_y_n_name].astype('object')
+'''
 
 ### 5.3 Generic Pipeline
 
