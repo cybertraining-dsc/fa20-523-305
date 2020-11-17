@@ -138,13 +138,13 @@ Once the pipelines were setup, the first model could be tested for accuracy. As 
 
 The results are as follows:
 
-| Experiment | Depth | Fit_Time | Pred_Time | r2_score |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| First Linear Reg  | 30cm  | 58.701572 | 0.238179 | 0.890208 |
-| First Linear Reg  | 60cm  | 58.847758 | 0.169551 | 0.898520 |
-| First Linear Reg  | 90cm  | 54.927837 | 0.172255 | 0.882179 |
-| First Linear Reg  | 120cm  | 64.877650 | 0.197685 | 0.884033 |
-| First Linear Reg  | 150cm  | 63.256277 | 0.170247 | 0.876900 |
+| Experiment       | Depth | Fit_Time | Pred_Time | r2_score  |
+|------------------|-------|----------|-----------|-----------|
+| First Linear Reg | 30cm  | 2.029387 | 0.169824  | 9.16E-01  |
+| First Linear Reg | 60cm  | 2.002373 | 0.17377   | -1.42E+15 |
+| First Linear Reg | 90cm  | 2.080393 | 0.162992  | 9.49E-01  |
+| First Linear Reg | 120cm | 2.299457 | 0.18056   | 9.46E-01  |
+| First Linear Reg | 150cm | 2.573193 | 0.186042  | 9.43E-01  |
 
 These results show that the data is pretty well correlated and that there is reason to believe that we could predict soil moisture from weather alone. Although an r^2 of around 0.87-0.89 are pretty good, with such highly related predictors, there is definitely room for model improvement. 
 
