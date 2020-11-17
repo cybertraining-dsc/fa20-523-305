@@ -146,15 +146,67 @@ The results are as follows:
 | First Linear Reg | 120cm | 2.299457 | 0.18056   | 9.46E-01  |
 | First Linear Reg | 150cm | 2.573193 | 0.186042  | 9.43E-01  |
 
+**Figure 5:** Baseline experiment results
+
 These results show that the data is pretty well correlated and that there is reason to believe that we could predict soil moisture from weather alone. Although an r^2 of around 0.916-0.949 are pretty good, with such highly related predictors, there is definitely room for model improvement. Also for a depth of 60 cm, something is not predicting correctly and is resulting in a small negative r^2
 
-## 10. Model Testing (Classifier)
+## 10. Classifier vs. Regressor
 
 While the output is continuous, there is an argument to use a categorical classifier model. For a specific plant, an optimal moisture range could be studied. For examples sake, the range could be 0.2-0.4 units. Then it would not matter if the soil is 0.2 or 0.3, both would be in the acceptable range. With this in mind, certain levels could be created to alert the farmer of which category they could be experienecing. For example there might be five levels: too dry, acceptable dryness, optimal, acceptable wetness, and too wet. The training data could be adjusted to fit into these categories. 
 
 Code to create a categorical variable for each of the depth measurments can be found in the section "Make Classifier Label" in the file: [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/code/ml_pipeline.ipynb).
 
 In the end, the decision to not use classifier methods was made. After using a regressor, the output could be converted to a categorical feature if the user or application so desired this. As our output is continuous in nature, precision would be lost.
+
+## 11. Various Other Linear Regression Model Experiments
+
+The next set of experiments came up with the results in the following table. This was a test to see if baseline Lasso or Ridge Regression would improve on the basic linear regression model. Results and code for this portion can be found in [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/code/ml_pipeline.ipynb) under the "Linear Regression Tests" section. 
+
+| Experiment            | Depth | Fit_Time | Pred_Time | r2_score |
+|-----------------------|-------|----------|-----------|----------|
+| Ridge Reg, Alpha = 1  | 30cm  | 1.321553 | 0.173714  | 0.916211 |
+| Ridge Reg, Alpha = 1  | 60cm  | 1.29167  | 0.187392  | 0.942757 |
+| Ridge Reg, Alpha = 1  | 90cm  | 1.393526 | 0.197152  | 0.94879  |
+| Ridge Reg, Alpha = 1  | 120cm | 1.307926 | 0.176656  | 0.946032 |
+| Ridge Reg, Alpha = 1  | 150cm | 1.33738  | 0.179585  | 0.94332  |
+| Lasso Reg, Alpha = 1  | 30cm  | 1.45102  | 0.170752  | -0.00018 |
+| Lasso Reg, Alpha = 1  | 60cm  | 1.419546 | 0.174177  | -4.6E-05 |
+| Lasso Reg, Alpha = 1  | 90cm  | 1.4632   | 0.176657  | -5.7E-06 |
+| Lasso Reg, Alpha = 1  | 120cm | 1.553091 | 0.182349  | -1.1E-06 |
+| Lasso Reg, Alpha = 1  | 150cm | 1.437419 | 0.163967  | -0.00018 |
+| Ridge Reg - GSCV      | 30cm  | 3.914718 | 0.203007  | 0.916235 |
+| Ridge Reg - GSCV      | 60cm  | 3.726651 | 0.172752  | 0.942757 |
+| Ridge Reg - GSCV      | 90cm  | 4.135154 | 0.200589  | 0.948796 |
+| Ridge Reg - GSCV      | 120cm | 4.03203  | 0.193512  | 0.946032 |
+| Ridge Reg - GSCV      | 150cm | 4.361977 | 0.191296  | 0.943328 |
+
+**Figure 6:** Further Linear Regression Experiment Results
+
+For the first two experiements, an alpha of 1 was used for both ridge and lasso regression. The third experiment used a special regressor that uses cross validation to try to find the best alpha value and then fit the model based on that. The best alpha value seemed to not have much effect at all on the results. Still the ridge regression so far was the best performing model.
+
+## 12. Other Models
+
+While there were great results in the different linear regression models, other models should be evaluated to make sure that something is not missed. Three models were chosen to check, Stochastic Gradient Descent, Support Vector Machine, and Random Forest. All of these models were tested with default parameters and their results are shown below in Figure 7, and the code can be found in the section called "Other Regressors Tests".
+
+| Experiment    | Depth | Fit_Time | Pred_Time | r2_score |
+|---------------|-------|----------|-----------|----------|
+| Random Forest | 30cm  | 60.06952 | 0.250543  | 0.977118 |
+| Random Forest | 60cm  | 62.17435 | 0.216641  | 0.989113 |
+| Random Forest | 90cm  | 62.29475 | 0.243051  | 0.99158  |
+| Random Forest | 120cm | 64.48227 | 0.256666  | 0.991274 |
+| Random Forest | 150cm | 68.47001 | 0.240149  | 0.991748 |
+| SVM           | 30cm  | 38.83822 | 5.712513  | 0.676934 |
+| SVM           | 60cm  | 106.2816 | 7.897556  | 0.766008 |
+| SVM           | 90cm  | 102.9438 | 7.763206  | 0.788833 |
+| SVM           | 120cm | 79.76476 | 6.985236  | 0.760895 |
+| SVM           | 150cm | 96.46352 | 7.548365  | 0.760936 |
+| SGD           | 30cm  | 1.382992 | 0.171777  | 0.89019  |
+| SGD           | 60cm  | 1.392753 | 0.15128   | 0.931394 |
+| SGD           | 90cm  | 1.399587 | 0.142493  | 0.941092 |
+| SGD           | 120cm | 1.438626 | 0.150302  | 0.936692 |
+| SGD           | 150cm | 1.403488 | 0.14933   | 0.92957  |
+
+**Figure 7:** Further Linear Regression Experiment Results
 
 ##  11. Conclusion
 
