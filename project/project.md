@@ -122,9 +122,13 @@ The first two visualizations ((viz_1)[https://raw.githubusercontent.com/cybertra
 
 ![Figure 3](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/images/one_small.png)
 
-**Figure 3:** Location of sensors within the test field
+**Figure 3:** Six locations soil moisture level over time at 30 cm depth
 
 The third and fourth grid shows the temperature at 150 cm, the results are what would logically be expected. The different sensors do not show much variance from location to location.
+
+![Figure 4](https://github.com/cybertraining-dsc/fa20-523-305/blob/master/project/images/four_small.png)
+
+**Figure 4:** Six locations soil temperature over time at 150 cm depth
 
 A simple bar chart is used to get a quick overview of the percipitation values over the same time period to see the overall trends. The most interesting part of this analysis is from the end of 2009 to nearly 2012. There is very little percipitation in this time period. Which initially looks like an issue with the data, but when it is compared to the water volume charts, a correlation can be seen. It isn't perfect, but in many of the sensors that have data in this period, the moisture seems rather constant.
 
