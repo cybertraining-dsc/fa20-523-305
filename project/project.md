@@ -18,7 +18,7 @@ Contents
 
 {{% /pageinfo %}}
 
-**Keywords:** agriculture, soil moisture, IoT, machine learning, regression
+**Keywords:** agriculture, soil moisture, IoT, machine learning, regression, sklearn
 
 ## 1. Introduction
 
