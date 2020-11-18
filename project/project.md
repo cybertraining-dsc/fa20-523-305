@@ -1,6 +1,8 @@
 # Estimating Soil Moisture Content Using Sensor and Weather Data
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-305/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-305/actions)
+[![Status](https://github.com/cybertraining-dsc/fa20-523-305/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-305/actions)
+Status: in progress
 
 Cody Harris, harrcody@iu.edu, [fa20-523-305](https://github.com/cybertraining-dsc/fa20-523-305), [Edit](https://github.com/cybertraining-dsc/fa20-523-305/edit/master/project/project.md)
 
