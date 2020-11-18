@@ -1,7 +1,7 @@
 # Estimating Soil Moisture Content Using Sensor and Weather Data
 
-[![Check Report](https://github.com/cybertraining-dsc/fa20-523-305/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-305/actions)
-[![Status](https://github.com/cybertraining-dsc/fa20-523-305/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-305/actions)
+[![Check Report](https://github.com/cybertraining-dsc/fa20-523-305/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-305/actions)  
+[![Status](https://github.com/cybertraining-dsc/fa20-523-305/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-305/actions)  
 
 Status: final
 
