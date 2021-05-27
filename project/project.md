@@ -7,6 +7,7 @@ Status: final, Type: Project
 Cody Harris, harrcody@iu.edu, [fa20-523-305](https://github.com/cybertraining-dsc/fa20-523-305), [Edit](https://github.com/cybertraining-dsc/fa20-523-305/edit/main/project/project.md)
 
 Code: [ml_pipeline.ipynb](https://github.com/cybertraining-dsc/fa20-523-305/blob/main/project/code/ml_pipeline.ipynb)
+Data: [data](https://github.com/cybertraining-dsc/fa20-523-305/tree/main/project/data)
 
 {{% pageinfo %}}
 
