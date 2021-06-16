@@ -1,4 +1,14 @@
-# Estimating Soil Moisture Content Using Weather Data
+---
+date: 2021-03-15
+title: Estimating Soil Moisture Content Using Weather Data
+linkTitle: Soil Moisture
+tags: ["project", "ai", "environment"]
+description: Estimating Soil Moisture Content Using Weather Data
+author: Cody Harris
+resources:
+- src: "**.{png,jpg}"
+  title: "Image #:counter"
+---
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-305/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-305/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-305/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-305/actions)
