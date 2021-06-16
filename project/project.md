@@ -3,7 +3,7 @@ date: 2021-03-15
 title: Estimating Soil Moisture Content Using Weather Data
 linkTitle: Soil Moisture
 tags: ["project", "ai", "environment"]
-description: Estimating Soil Moisture Content Using Weather Data
+description: "As the world is gripped with finding solutions to problems such as food and water shortages, the study of agriculture could improve where we stand with both of these problems. By integrating weather and sensor data, a model could be created to estimate soil moisture based on weather data that is easily accessible. While some farmers could afford to have many moisture sensors and monitor them, many would not have the funds or resources to keep track of the soil moisture long term. A solution would be to allow farmers to contract out a limited study of their land using sensors and then this model would be able to predict soil moistures from weather data. This collection of data, and predictions could be used on their own or as a part of a larger agricultural solution."
 author: Cody Harris
 resources:
 - src: "**.{png,jpg}"
